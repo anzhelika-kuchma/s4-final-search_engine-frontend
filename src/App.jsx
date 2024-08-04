@@ -6,17 +6,16 @@ import RegistrationPage from "./pages/RegistrationPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import EventPage from "./pages/EventPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
-
 import NavigationComponent from "./components/NavigationComponent.jsx";
 import LogoutComponent from "./components/LogoutComponent.jsx";
-
 import "./App.css";
 
 const App = () => {
     return (
         <div className="container container--px flow-spacing--m">
-            <NavigationComponent />
+
             <MainContextProvider>
+                <NavigationComponent />
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/account" element={<AccountPage />}>
@@ -25,7 +24,7 @@ const App = () => {
                             element={<RegistrationPage />}
                         />
                         <Route path="login" element={<LoginPage />} />
-                        <Route path="logout" element={<LogoutComponent />} />
+                        <Route path="logout" />
                     </Route>
                     <Route path="/event" element={<EventPage />} />
                     <Route path="*" element={<NotFoundPage />} />
