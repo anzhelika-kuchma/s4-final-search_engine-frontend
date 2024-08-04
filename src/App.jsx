@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-
 import HomePage from "./pages/HomePage.jsx";
 import AccountPage from "./pages/AccountPage.jsx";
 import RegistrationPage from "./pages/RegistrationPage.jsx";
@@ -20,5 +19,4 @@ const App = () => {
         </div>
     );
 };
-
 export default App;
