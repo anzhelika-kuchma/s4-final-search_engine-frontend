@@ -1,5 +1,5 @@
 import LoginPage from "./pages/LoginPage.jsx";
-import ProcedurePage from "./pages/ProcedurePage.jsx";
+import EventPage from "./pages/EventPage.jsx";
 
 import NavigationComponent from "./components/NavigationComponent.jsx";
 
@@ -15,7 +15,7 @@ const App = () => {
                     <Route path="registration" element={<RegistrationPage />} />
                     <Route path="login" element={<LoginPage />} />
                 </Route>
-                <Route path="/procedure" element={<ProcedurePage />} />
+                <Route path="/event" element={<EventPage />} />
             </Routes>
         </div>
     );
