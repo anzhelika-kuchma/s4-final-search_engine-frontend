@@ -1,9 +1,9 @@
 const EventComponent = ({ data }) => {
     return (
-        <div>
+        <h1>
             {JSON.stringify(data) ||
                 "no content to display yet, check the console"}
-        </div>
+        </h1>
     );
 };
 

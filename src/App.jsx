@@ -1,13 +1,14 @@
-import RegistrationPage from "./pages/RegistrationPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import ProcedurePage from "./pages/ProcedurePage.jsx";
-import NotFoundPage from "./pages/NotFoundPage.jsx";
+
+import NavigationComponent from "./components/NavigationComponent.jsx";
 
 import "./App.css";
 
 const App = () => {
     return (
         <div className="container container--px flow-spacing--m">
+            <NavigationComponent />
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/account" element={<AccountPage />}>
@@ -15,7 +16,6 @@ const App = () => {
                     <Route path="login" element={<LoginPage />} />
                 </Route>
                 <Route path="/procedure" element={<ProcedurePage />} />
-                <Route path="*" element={<NotFoundPage />}></Route>
             </Routes>
         </div>
     );
