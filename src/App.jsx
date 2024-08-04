@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { MainContextProvider } from "./context/MainContext.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import AccountPage from "./pages/AccountPage.jsx";
 import RegistrationPage from "./pages/RegistrationPage.jsx";
@@ -15,16 +16,21 @@ const App = () => {
     return (
         <div className="container container--px flow-spacing--m">
             <NavigationComponent />
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/account" element={<AccountPage />}>
-                    <Route path="registration" element={<RegistrationPage />} />
-                    <Route path="login" element={<LoginPage />} />
-                    <Route path="logout" element={<LogoutComponent />} />
-                </Route>
-                <Route path="/event" element={<EventPage />} />
-                <Route path="*" element={<NotFoundPage />} />
-            </Routes>
+            <MainContextProvider>
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/account" element={<AccountPage />}>
+                        <Route
+                            path="registration"
+                            element={<RegistrationPage />}
+                        />
+                        <Route path="login" element={<LoginPage />} />
+                        <Route path="logout" element={<LogoutComponent />} />
+                    </Route>
+                    <Route path="/event" element={<EventPage />} />
+                    <Route path="*" element={<NotFoundPage />} />
+                </Routes>
+            </MainContextProvider>
         </div>
     );
 };
