@@ -7,7 +7,17 @@ import LoginPage from "./pages/LoginPage.jsx";
 import EventPage from "./pages/EventPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import NavigationComponent from "./components/NavigationComponent.jsx";
-import LogoutComponent from "./components/LogoutComponent.jsx";
+
+
+import {
+    homePath,
+    eventPath,
+    accountPath,
+    registrationPath,
+    loginPath,
+    logoutPath,
+} from "./config/defaults.js";
+
 import "./App.css";
 
 const App = () => {
@@ -17,16 +27,15 @@ const App = () => {
             <MainContextProvider>
                 <NavigationComponent />
                 <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/account" element={<AccountPage />}>
-                        <Route
-                            path="registration"
-                            element={<RegistrationPage />}
-                        />
-                        <Route path="login" element={<LoginPage />} />
-                        <Route path="logout" />
-                    </Route>
-                    <Route path="/event" element={<EventPage />} />
+                <Route path={homePath} element={<HomePage />} />
+                    <Route path={eventPath} element={<EventPage />} />
+                    <Route path={accountPath} element={<AccountPage />} />
+                    <Route
+                        path={registrationPath}
+                        element={<RegistrationPage />}
+                    />
+                    <Route path={loginPath} element={<LoginPage />} />
+                    <Route path={logoutPath} element={null} />
                     <Route path="*" element={<NotFoundPage />} />
                 </Routes>
             </MainContextProvider>
