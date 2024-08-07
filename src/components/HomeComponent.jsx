@@ -5,12 +5,12 @@ import { registrationPath } from "../config/defaults.js";
 const HomeComponent = () => {
     return (
         <>
-            <h1 className="fw--600">Welcome to Significant Events in Canadian History Search</h1>
+            <h1 className="header">Welcome to the Significant Events on the Canadian History Page</h1>
             <div>
 
-                <p>
-                    Register to start the search{" "} - 
-                    <Link to={registrationPath}>registration page</Link> 
+                <p className="subtitle">
+                    <Link to={registrationPath}>Register</Link> 
+                    {" "}to start the search..
                 </p>
 
             </div>

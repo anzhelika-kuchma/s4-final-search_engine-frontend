@@ -7,7 +7,7 @@ const LoginPage = () => {
 
     return (
         <>
-            <h1 className="fw--600">Login page</h1>
+            <h1 className="header">Login page</h1>
             <AuthenticationComponent pathname={pathname} />
         </>
     );

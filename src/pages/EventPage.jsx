@@ -10,7 +10,7 @@ const EventPage = () => {
 
     return (
         <>
-            <h1 className="fw--600">Event Archive</h1>
+            <h1 className="header">Event Search</h1>
             {isAuthenticated ? (
                 <EventComponent />
             ) : (

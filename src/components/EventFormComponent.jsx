@@ -6,7 +6,7 @@ const EventFormComponent = ({ onSubmit }) => {
                     id="keyword"
                     name="keyword"
                     type="search"
-                    placeholder="event"
+                    placeholder="enter a year or an event"
                 />
             </label>
             <button type="submit">Search</button>

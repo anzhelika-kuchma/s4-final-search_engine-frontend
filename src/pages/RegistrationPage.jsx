@@ -7,7 +7,7 @@ const RegistrationPage = () => {
 
     return (
         <>
-            <h1 className="fw--600">Registration page</h1>
+            <h1 className="header">Registration page</h1>
             <AuthenticationComponent pathname={pathname} />
         </>
     );

@@ -11,6 +11,8 @@ import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 import NavigationComponent from "./components/NavigationComponent.jsx";
 
+import 'bootstrap/dist/css/bootstrap.css';
+
 import {
     homePath,
     eventPath,
