@@ -1,9 +1,46 @@
-const EventComponent = ({ data }) => {
+import { useEffect, useState } from "react";
+import { useLocation, useSearchParams } from "react-router-dom";
+
+import EventFormComponent from "./EventFormComponent.jsx";
+
+import { getData } from "../api/serverAPI.js";
+import { baseURI } from "../config/defaults.js";
+import serializeFormQuery from "../utils/serializeFormQuery.js";
+
+const EventComponent = () => {
+    const { pathname, search } = useLocation();
+    const [searchParams, setSearchParams] = useSearchParams();
+    const [data, setData] = useState();
+
+    useEffect(() => {
+        const url = baseURI + pathname + search;
+
+        searchParams.size && getEvents(url);
+    }, [searchParams]);
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        const target = event.target;
+        const params = serializeFormQuery(target);
+
+        setSearchParams(params);
+    };
+
+    const getEvents = async (url) => {
+        const { body } = await getData(url);
+
+        setData(body);
+    };
+
     return (
-        <h1>
-            {JSON.stringify(data) ||
-                "no content to display yet, check the console"}
-        </h1>
+        <>
+            <EventFormComponent onSubmit={handleSubmit} />
+            <ul>
+                {data &&
+                    data.map(({ name }, index) => <li key={index}>{name}</li>)}
+            </ul>
+        </>
     );
 };
 

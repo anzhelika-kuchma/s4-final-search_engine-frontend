@@ -1,9 +1,20 @@
-const HomeComponent = ({ data }) => {
+import { Link } from "react-router-dom";
+
+import { registrationPath } from "../config/defaults.js";
+
+const HomeComponent = () => {
     return (
-        <h1 className="fw--600">
-        {JSON.stringify(data) ||
-            "no content to display yet"}
-    </h1>
+        <>
+            <h1 className="fw--600">Welcome to Significant Events in Canadian History Search</h1>
+            <div>
+
+                <p>
+                    Register to start the search{" "} - 
+                    <Link to={registrationPath}>registration page</Link> 
+                </p>
+
+            </div>
+        </>
     );
 };
 

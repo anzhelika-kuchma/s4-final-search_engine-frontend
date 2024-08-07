@@ -1,13 +1,15 @@
 import { Routes, Route } from "react-router-dom";
+
 import { MainContextProvider } from "./context/MainContext.jsx";
+
 import HomePage from "./pages/HomePage.jsx";
 import AccountPage from "./pages/AccountPage.jsx";
 import RegistrationPage from "./pages/RegistrationPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import EventPage from "./pages/EventPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
-import NavigationComponent from "./components/NavigationComponent.jsx";
 
+import NavigationComponent from "./components/NavigationComponent.jsx";
 
 import {
     homePath,
@@ -23,11 +25,10 @@ import "./App.css";
 const App = () => {
     return (
         <div className="container container--px flow-spacing--m">
-
             <MainContextProvider>
                 <NavigationComponent />
                 <Routes>
-                <Route path={homePath} element={<HomePage />} />
+                    <Route path={homePath} element={<HomePage />} />
                     <Route path={eventPath} element={<EventPage />} />
                     <Route path={accountPath} element={<AccountPage />} />
                     <Route
@@ -42,4 +43,5 @@ const App = () => {
         </div>
     );
 };
+
 export default App;

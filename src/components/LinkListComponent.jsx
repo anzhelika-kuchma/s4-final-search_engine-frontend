@@ -12,6 +12,8 @@ const LinkListComponent = ({ onClick, linkMap }) => {
             </ul>
         );
     };
+
     return renderList(linkMap);
 };
+
 export default LinkListComponent;
