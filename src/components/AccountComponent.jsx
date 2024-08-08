@@ -20,8 +20,8 @@ const AccountComponent = ({ userData }) => {
 
     return (
         <>
-            <h1 className="fw--600">{`${userData}, welcome to your personal account`}</h1>
-            <p>{JSON.stringify(data)}</p>
+            <h1 className="header">{`Welcome to your account, ${userData.charAt(0).toUpperCase() + userData.slice(1)}`}</h1>
+            <p className="personal-data">{JSON.stringify(data)}</p>
         </>
     );
 };

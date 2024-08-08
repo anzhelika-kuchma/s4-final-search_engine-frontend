@@ -36,9 +36,9 @@ const EventComponent = () => {
     return (
         <>
             <EventFormComponent onSubmit={handleSubmit} />
-            <ul>
+            <ul className="event-list">
                 {data &&
-                    data.map(({ name }, index) => <li key={index}>{name}</li>)}
+                    data.map(({ name }, index) => <li className="event" key={index}>{name}</li>)}
             </ul>
         </>
     );

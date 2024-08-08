@@ -175,6 +175,10 @@ body{
   letter-spacing: .2rem;
 }
 
+.nav-element > a:hover{
+  text-decoration: underline;
+}
+
 .header{
   color: #bc2525;
   text-shadow: 0px 0px 1px #000000;
@@ -192,5 +196,30 @@ body{
   color:#05004e;
 }
 
+.search{
+  width: 25rem;
+}
+
+.event-list{
+  /* width: 45rem; */
+  background-color: whitesmoke;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 2em;
+  
+}
+
+.event{
+  color: #05004e;
+  font-weight: 500;
+  font-size: 1.4rem;
+  padding: 0.5em;
+}
+.personal-data{
+  color: #05004e;
+  font-weight: 500;
+  font-size: 1.1rem;
+
+}
 
 

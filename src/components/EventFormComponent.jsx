@@ -4,12 +4,13 @@ const EventFormComponent = ({ onSubmit }) => {
             <label htmlFor="keyword">
                 <input
                     id="keyword"
+                    className="form-control search"
                     name="keyword"
                     type="search"
-                    placeholder="enter a year or an event"
+                    placeholder="Enter a keyword, like 'election' or '1920'..."
                 />
             </label>
-            <button type="submit">Search</button>
+            <button type="submit" className="btn btn-dark m-3">Search</button>
         </form>
     );
 };

@@ -5,7 +5,7 @@ import { registrationPath } from "../config/defaults.js";
 const HomeComponent = () => {
     return (
         <>
-            <h1 className="header">Welcome to the Significant Events on the Canadian History Page</h1>
+            <h1 className="header">Significant Events on the Canadian History</h1>
             <div>
 
                 <p className="subtitle">
